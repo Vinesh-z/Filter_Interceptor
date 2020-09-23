@@ -52,6 +52,11 @@ public class MyHttpServletRequestWrapper extends HttpServletRequestWrapper {
 		}
 
 		@Override
+		public int read() throws IOException {
+			return input.read();
+		}
+
+		@Override
 		public boolean isFinished() {
 			// TODO Auto-generated method stub
 			return false;
@@ -66,13 +71,7 @@ public class MyHttpServletRequestWrapper extends HttpServletRequestWrapper {
 		@Override
 		public void setReadListener(ReadListener listener) {
 			// TODO Auto-generated method stub
-			
-		}
 
-		@Override
-		public int read() throws IOException {
-			// TODO Auto-generated method stub
-			return 0;
 		}
 	}
 }
